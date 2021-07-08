@@ -9,6 +9,8 @@ const forecast = require('./weatherCallback')
 // console.log(path.join(__dirname,'/public'));
 
 const app = express();
+//it will listen us at given heroku port but if we don't have that and we have to use locally then it will listen us at port 3000
+const port = process.env.PORT || 3000
 
 //setting up handlebars
 app.set('view engine', 'hbs')
@@ -128,11 +130,14 @@ app.get('*',(req,res)=>{
     })
 })
 
-//This is the port where we listen our website.
-app.listen(3000, () => {
-  console.log("server is started on the port 3000");
-});
+//This is the port where we listen our website Locally.
+// app.listen(3000, () => {
+//   console.log("server is started on the port 3000");
+// });
+
+//This is the port where heroku listen our website.
+app.listen(port,()=>{
+  console.log('server started on the port'+ port );
+})
 
 
-
-  
