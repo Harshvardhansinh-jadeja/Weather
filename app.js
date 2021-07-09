@@ -39,9 +39,9 @@ app.get('',(req,res)=>{
 //Dynamic file using hbs
 app.get('/about',(req,res)=>{
   res.render('about',{
-    title : 'about me(dynamic)',
-    AboutMe : 'I am a student at dharmsinh desai university',
-    degree : 'I am pursuing B.Tech Information technology',
+    title : 'About Me',
+    AboutMe : 'I am a student at dharmsinh desai university.',
+    degree : 'I am pursuing B.Tech Information Technology.',
     name : 'H.S.Jadeja',
   })
 })

@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About us</title>
+    <link rel="icon" href="/img/about.jpg">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     {{!-- <h2>About us</h2> --}}
     {{>header}}
-    <p>Hi guys ,{{AboutMe}}</p>
-    <p>Currently<b>{{degree}}</b></p>
+    <p class="about">Hi guys ,{{AboutMe}}</p>
+    <p class="about">Currently <b>{{degree}}</b></p>
+    <p class="about">I have made this website using mapbox and weatherstack api and it will integrate the data of both sites and give you the exact weather prediction at your location.</p>
     {{!-- Here we use absolute path from root path to image. --}}
-    <img class="imageMillie" src="/img/bhailu.jpeg" alt="My boby">
+    <img class="imageMillie" src="/img/bhailu.jpg" alt="My boby">
     {{>footer}}
 </body>
 </html>
